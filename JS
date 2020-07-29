@@ -1,233 +1,260 @@
 // ce code est écrit par BEN-TAHRI MERWANE, pour son examen de seconde chance
 
 "use strict";
+const pcBureaux = [
 
+    {id : "pcB01",
+        nom : "LDLC PC Bazooka" ,
+        processeur : "Intel Core i5-9400F (2.9 GHz)"	,
+        carteMere : "MSI MAG B365M MORTAR" ,
+        ram : "16 Go de mémoire vive de type DDR4 2400 MHz" ,
+        stockage : "SSD M.2 PCIe NVMe 480 Go" ,
+        carteGraphique : "NVIDIA GeForce RTX 2060" ,
+        Alimentation : "Alimentation 500W" ,
+        Prix : 999.94
+    },
 
-function buildHTMLarticles   () {
+    {id : "pcB02",
+        nom : "LDLC PC10 Plus Perfect" ,
+        processeur : "Intel Core i7-9700K (3.6 GHz)"	,
+        carteMere : "MSI MPG Z390 GAMING PLUS" ,
+        ram : "16 Go DDR4 3000 MHz" ,
+        stockage : " SSD LDLC F8 PLUS M.2 2280 NVMe 240 Go" ,
+        carteGraphique : "NVIDIA GeForce RTX 2060 SUPER 8 Go" ,
+        Alimentation : "Alimentation modulaire 650W LDLC US-650G Quality Select 80PLUS Gold" ,
+        Prix : 1699},
 
-    buildBureaux()
-    buildPortables()
-    buildSouris()
-    buildclavier()
-    buildecran()
-    buildwebcam()
+    {id : "pcB03",
+        nom : "LDLC PC In extensor-SSD" ,
+        processeur : "Intel Core i3-9100F (3.6 GHz)"	,
+        carteMere : "micro ATX avec Chipset Intel H310" ,
+        ram : "8 Go de mémoire vive de type DDR4 2400 MHz\n" ,
+        stockage : " SSD 240 Go" ,
+        carteGraphique : "Carte graphique dédiée 1 Go" ,
+        Alimentation : "Alimentation 350 W" ,
+        Prix : 399.95
 
+    },
+    {id : "pcB04",
+        nom : "PC Start Bureau Pentium" ,
+        processeur : "Dual-Core Intel Pentium Gold G5400 (3.7 GHz)"	,
+        carteMere : "chipset Intel H310 - Micro ATX" ,
+        ram : "RAM DDR4 4 Go" ,
+        stockage : " SSD 480 Go" ,
+        carteGraphique : "Intel HD Graphics 510" ,
+        Alimentation : "Alimentation 350 W" ,
+        Prix : 399.95}
 
+];
 
-}
+const pcPortable = [
 
+    {id : "pcP01",
+        nom : "Dell G3 15 3500 (8JJYC)\n" ,
+        processeur : "Intel Core i7-10750H (Hexa-Core 2.6 GHz / 5 GHz Turbo - 12 Threads - Cache 12 Mo)"	,
+        ram : "16 Go de mémoire vive DDR4 2933 MHz" ,
+        stockage : "SSD NVMe PCIe de 512 Go" ,
+        carteGraphique : " NVIDIA GeForce RTX 2060 avec 6 Go de mémoire dédiée GDDR6" ,
+        Ecran : "144 Hz de 15.6\" avec résolution Full HD (1920 x 1080 pixels)" ,
+        Prix : 1599.95
+    },
+    {id : "pcP02",
+        nom : "MSI GF63 Thin 10SCXR-414XFR\n" ,
+        processeur : " Intel Core i5-10300H (Quad-Core 2.5 GHz / 4.5 GHz Turbo - 8 Threads - Cache 8 Mo)"	,
+        ram : "8 Go de mémoire vive DDR4 2666 MHz " ,
+        stockage : "Disque dur de 1 To (5400 RPM) " ,
+        carteGraphique : " NVIDIA GeForce GTX 1650 (Max-Q) " ,
+        Ecran : "Ecran de 15.6 pouces avec résolution Full HD (1920 x 1080 pixels) et fréquence de 120 Hz" ,
+        Prix : 849.95
+    },
+    {id : "pcP03",
+        nom : "LDLC Aurore NL4-8-S1\n" ,
+        processeur : " Intel Celeron N4100 (Quad-Core 1.1 GHz / 2.4 GHz Turbo - Cache 4 Mo - TDP 6W) "	,
+        ram : "8 Go de mémoire vive DDR4 2400 MHz" ,
+        stockage : "SSD 120 Go M.2 SATA 6 Gb/s" ,
+        carteGraphique : " Intel UHD Graphics 600" ,
+        Ecran : "Ecran mat de 15.6\" avec résolution Full HD (1920 x 1080 pixels)" ,
+        Prix : 319.94
+    },
+    {id : "pcP04",
+        nom : "ASUS Vivobook F512DA-EJ414T\n" ,
+        processeur : "AMD Ryzen 5 3500U (Quad-Core 2.1 GHz / 3.7 GHz Turbo - Cache 6 Mo)"	,
+        ram : "8 Go de mémoire DDR4 2400 MHz " ,
+        stockage : "SSD M.2 PCIe de 512 Go" ,
+        carteGraphique : "AMD Radeon Vega 8 Graphics " ,
+        Ecran : "Ecran de 15.6 pouces anti-reflets avec résolution Full HD (1920 x 1080)" ,
+        Prix : 679.95
+    },
+];
 
+const  souris = [
 
-
-function buildBureaux() {
-    var pcBureaux = [
-
-        {nom : "LDLC PC Bazooka" ,
-            processeur : "Intel Core i5-9400F (2.9 GHz)"	,
-            carteMere : "MSI MAG B365M MORTAR" ,
-            ram : "16 Go de mémoire vive de type DDR4 2400 MHz" ,
-            stockage : "SSD M.2 PCIe NVMe 480 Go" ,
-            carteGraphique : "NVIDIA GeForce RTX 2060" ,
-            Alimentation : "Alimentation 500W" ,
-            Prix : 999.94
-        },
-
-        {nom : "LDLC PC10 Plus Perfect" ,
-            processeur : "Intel Core i7-9700K (3.6 GHz)"	,
-            carteMere : "MSI MPG Z390 GAMING PLUS" ,
-            ram : "16 Go DDR4 3000 MHz" ,
-            stockage : " SSD LDLC F8 PLUS M.2 2280 NVMe 240 Go" ,
-            carteGraphique : "NVIDIA GeForce RTX 2060 SUPER 8 Go" ,
-            Alimentation : "Alimentation modulaire 650W LDLC US-650G Quality Select 80PLUS Gold" ,
-            Prix : 1699},
-
-        {nom : "LDLC PC In extensor-SSD" ,
-            processeur : "Intel Core i3-9100F (3.6 GHz)"	,
-            carteMere : "micro ATX avec Chipset Intel H310" ,
-            ram : "8 Go de mémoire vive de type DDR4 2400 MHz\n" ,
-            stockage : " SSD 240 Go" ,
-            carteGraphique : "Carte graphique dédiée 1 Go" ,
-            Alimentation : "Alimentation 350 W" ,
-            Prix : 399.95
-
-        },
-        {nom : "PC Start Bureau Pentium" ,
-            processeur : "Dual-Core Intel Pentium Gold G5400 (3.7 GHz)"	,
-            carteMere : "chipset Intel H310 - Micro ATX" ,
-            ram : "RAM DDR4 4 Go" ,
-            stockage : " SSD 480 Go" ,
-            carteGraphique : "Intel HD Graphics 510" ,
-            Alimentation : "Alimentation 350 W" ,
-            Prix : 399.95}
-
-    ];
-
-    var constructionPcBureaux = document.getElementById("articlesBureaux");
-
-    for (let b of pcBureaux ) {
-        var trBureaux = "<td>" + b.nom + "</td><td>" + b.processeur + "</td><td>" + b.carteMere + "</td><td>" + b.ram + "</td><td>" + b.stockage + "</td><td>" + b.carteGraphique + "</td><td>" + b.Alimentation + "</td><td>" + b.Prix + "</td>"
-        constructionPcBureaux.innerHTML += trBureaux
-    }
-
-}
-
-function buildPortables() {
-
-    var pcPortable = [
-
-        {nom : "Dell G3 15 3500 (8JJYC)\n" ,
-            processeur : "Intel Core i7-10750H (Hexa-Core 2.6 GHz / 5 GHz Turbo - 12 Threads - Cache 12 Mo)"	,
-            ram : "16 Go de mémoire vive DDR4 2933 MHz" ,
-            stockage : "SSD NVMe PCIe de 512 Go" ,
-            carteGraphique : " NVIDIA GeForce RTX 2060 avec 6 Go de mémoire dédiée GDDR6" ,
-            Ecran : "144 Hz de 15.6\" avec résolution Full HD (1920 x 1080 pixels)" ,
-            Prix : 1599.95
-        },
-        {nom : "MSI GF63 Thin 10SCXR-414XFR\n" ,
-            processeur : " Intel Core i5-10300H (Quad-Core 2.5 GHz / 4.5 GHz Turbo - 8 Threads - Cache 8 Mo)"	,
-            ram : "8 Go de mémoire vive DDR4 2666 MHz " ,
-            stockage : "Disque dur de 1 To (5400 RPM) " ,
-            carteGraphique : " NVIDIA GeForce GTX 1650 (Max-Q) " ,
-            Ecran : "Ecran de 15.6 pouces avec résolution Full HD (1920 x 1080 pixels) et fréquence de 120 Hz" ,
-            Prix : 849.95
-        },
-        {nom : "LDLC Aurore NL4-8-S1\n" ,
-            processeur : " Intel Celeron N4100 (Quad-Core 1.1 GHz / 2.4 GHz Turbo - Cache 4 Mo - TDP 6W) "	,
-            ram : "8 Go de mémoire vive DDR4 2400 MHz" ,
-            stockage : "SSD 120 Go M.2 SATA 6 Gb/s" ,
-            carteGraphique : " Intel UHD Graphics 600" ,
-            Ecran : "Ecran mat de 15.6\" avec résolution Full HD (1920 x 1080 pixels)" ,
-            Prix : 319.94
-        },
-        {nom : "ASUS Vivobook F512DA-EJ414T\n" ,
-            processeur : "AMD Ryzen 5 3500U (Quad-Core 2.1 GHz / 3.7 GHz Turbo - Cache 6 Mo)"	,
-            ram : "8 Go de mémoire DDR4 2400 MHz " ,
-            stockage : "SSD M.2 PCIe de 512 Go" ,
-            carteGraphique : "AMD Radeon Vega 8 Graphics " ,
-            Ecran : "Ecran de 15.6 pouces anti-reflets avec résolution Full HD (1920 x 1080)" ,
-            Prix : 679.95
-        },
-
-
-    ];
-
-    var constructionPcPortables = document.getElementById("articlesPortables");
-
-    for (let p of pcPortable ) {
-        var trPortables = "<td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Ecran + "</td><td>" + p.Prix + "</td>"
-        constructionPcPortables.innerHTML += trPortables
-    }
-
-}
-
-function buildSouris() {
-
-    var souris = [
-
-        {nom : "Logitech B100 Optical USB Mouse (Noir)" ,
+        {id : "S01",
+            nom : "Logitech B100 Optical USB Mouse (Noir)" ,
             bouton : "3 boutons"	,
             dpi : "800 dpi" ,
             poids : "130 g" ,
             cable : "Câble de 180 cm" ,
             Prix : 9.95
         },
-        {nom : "Glorious Model O Regular (Blanc Mat)" ,
+        {id : "S02",
+            nom : "Glorious Model O Regular (Blanc Mat)" ,
             bouton : " 6boutons"	,
             dpi : "12 000 dpi" ,
             poids : "67 g" ,
             cable : "Câble de 2m" ,
             Prix : 64.94
         },
-        {nom : "ASUS Cerberus Fortus" ,
+        {id : "S03",
+            nom : "ASUS Cerberus Fortus" ,
             bouton : "6 boutons"	,
             dpi : "4000 dpi" ,
             poids : "114 g" ,
             cable : "Câble de 1.8m" ,
             Prix : 49.94
         }
-        ];
+    ];
 
-    var constructionSouris = document.getElementById("articlesSouris");
+const clavier = [
+
+    {id : "c01",
+        nom : "LDLC AZERTY+" ,
+        Normes : "AZERTY "	,
+        Technologiedeconnexionduclavier : "Filaire" ,
+        poids : " 534 g",
+        Dimensions : "456 x 156 x 24 mm",
+        LongueurDuCable : "150 cm",
+        Prix : 12.95},
+    {id : "c02",
+        nom : "Apple Magic Keyboard MLA22F/A" ,
+        Normes : "AZERTY "	,
+        Technologiedeconnexionduclavier : "Bluetooth" ,
+        poids : " 0.231 kg",
+        Dimensions : "279 x 10.9 x 114.9 mm",
+        LongueurDuCable : "",
+        Prix : 99.95},
+    {id : "c03",
+        nom : "ASUS ROG Republic of Gamers Claymore (MX Red)" ,
+        Normes : "AZERTY, Français "	,
+        Technologiedeconnexionduclavier : "filaire" ,
+        poids : " 943 g",
+        Dimensions : "450 x 145 x 45 mm",
+        LongueurDuCable : "145 cm",
+        Prix : 199.94},
+
+];
+
+const webCam = [
+
+    {id : "wb01",
+        nom : "Logitech HD Webcam C270" ,
+        Dimensions : " 71 mm x 31\n" +
+            " mm x 24 mm "	,
+        resolutions : "3 Megapixels" ,
+        Resolutionvideo : " 1280 x 720 pixels",
+        couleurs : "noir",
+        Prix : 39.99},
+    {id : "wb02",
+        nom : "AMX AcendoVibe ACV-5100 Gris" ,
+        Dimensions : " 132 x 590 x 105 mm "	,
+        resolutions : "12 Megapixels" ,
+        Resolutionvideo : " 920 x 1080p 30 fps",
+        couleurs : "Grid",
+        Prix : 999.95},
+    {id : "wb03",
+        nom : "ASUS ROG Eye" ,
+        Dimensions : " 81 x 28 x 16 mm "	,
+        resolutions : "15 Megapixels" ,
+        Resolutionvideo : " 1920 x 1080 pixels",
+        couleurs : "noir",
+        Prix : 109.94}, ];
+
+
+
+function buildHTMLarticles   () {
+
+    let constructionPcBureaux = document.getElementById("articlesBureaux");
+
+    for (let p of pcBureaux ) {
+        let trBureaux = "<tr id=" + p.id + "  + ondblclick='ajoutAchat()'  "+ "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.carteMere + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Alimentation + "</td><td>" + p.Prix + "</td></tr>"
+        constructionPcBureaux.innerHTML += trBureaux
+    }
+    let constructionPcPortables = document.getElementById("articlesPortables");
+    for (let p of pcPortable ) {
+        let trPortables = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Ecran + "</td><td>" + p.Prix + "</td></tr>"
+        constructionPcPortables.innerHTML += trPortables
+    }
+    let constructionSouris = document.getElementById("articlesSouris");
 
     for (let p of souris ) {
-        var trSouris = "<td>" + p.nom + "</td><td>" + p.bouton + "</td><td>" + p.dpi + "</td><td>" + p.poids + "</td><td>" + p.cable + "</td><td>" + p.Prix + "</td>"
+        let trSouris = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.bouton + "</td><td>" + p.dpi + "</td><td>" + p.poids + "</td><td>" + p.cable + "</td><td>" + p.Prix + "</td>"
         constructionSouris.innerHTML += trSouris
     }
+    let constructionClaviers = document.getElementById("articlesClaviers");
+    for (let p of clavier ) {
+        let trClavier = "<td>" + p.nom + "</td><td>" + p.Normes + "</td><td>" + p.Technologiedeconnexionduclavier + "</td><td>" + p.poids + "</td><td>" + p.Dimensions + "</td><td>" + p.LongueurDuCable + "</td><td>" + p.Prix + "</td>"
+        constructionClaviers.innerHTML += trClavier
+    }
+    let constructionEcran = document.getElementById("articlesEcrans");
+    for (let p of clavier ) {
+        let trecran = "<td>" + p.nom + "</td><td>" + p.tailles + "</td><td>" + p.resolutions + "</td><td>" + p.Frequence + "</td><td>" + p.Entreesvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
+        constructionEcran.innerHTML += trecran
+    }
+    let constructionwebCam = document.getElementById("articlesWebCam");
+    for (let p of webCam ) {
+        let trwebcam = "<td>" + p.nom + "</td><td>" + p.Dimensions + "</td><td>" + p.resolutions + "</td><td>" + p.Resolutionvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
+        constructionwebCam.innerHTML += trwebcam
+    }
 
+
+
+}
+
+/**
+
+function buildBureaux() {
+
+    let constructionPcBureaux = document.getElementById("articlesBureaux");
+
+    for (let p of pcBureaux ) {
+        let trBureaux = "<tr id=" + p.id + "  + ondblclick='ajoutAchat()'  "+ "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.carteMere + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Alimentation + "</td><td>" + p.Prix + "</td></tr>"
+        constructionPcBureaux.innerHTML += trBureaux
+    }
+}
+
+function buildPortables() {
+
+    let constructionPcPortables = document.getElementById("articlesPortables");
+    for (let p of pcPortable ) {
+        let trPortables = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Ecran + "</td><td>" + p.Prix + "</td></tr>"
+        constructionPcPortables.innerHTML += trPortables
+    }
+}
+
+function buildSouris() {
+
+    let constructionSouris = document.getElementById("articlesSouris");
+
+    for (let p of souris ) {
+        let trSouris = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.bouton + "</td><td>" + p.dpi + "</td><td>" + p.poids + "</td><td>" + p.cable + "</td><td>" + p.Prix + "</td>"
+        constructionSouris.innerHTML += trSouris
+    }
 }
 
 function buildclavier() {
 
-    var clavier = [
-
-        {nom : "LDLC AZERTY+" ,
-            Normes : "AZERTY "	,
-            Technologiedeconnexionduclavier : "Filaire" ,
-            poids : " 534 g",
-            Dimensions : "456 x 156 x 24 mm",
-            LongueurDuCable : "150 cm",
-            Prix : 12.95},
-        {nom : "Apple Magic Keyboard MLA22F/A" ,
-            Normes : "AZERTY "	,
-            Technologiedeconnexionduclavier : "Bluetooth" ,
-            poids : " 0.231 kg",
-            Dimensions : "279 x 10.9 x 114.9 mm",
-            LongueurDuCable : "",
-            Prix : 99.95},
-        {nom : "ASUS ROG Republic of Gamers Claymore (MX Red)" ,
-            Normes : "AZERTY, Français "	,
-            Technologiedeconnexionduclavier : "filaire" ,
-            poids : " 943 g",
-            Dimensions : "450 x 145 x 45 mm",
-            LongueurDuCable : "145 cm",
-            Prix : 199.94},
-
-    ];
-
-    var constructionClaviers = document.getElementById("articlesClaviers");
-
+    let constructionClaviers = document.getElementById("articlesClaviers");
     for (let p of clavier ) {
-        var trClavier = "<td>" + p.nom + "</td><td>" + p.Normes + "</td><td>" + p.Technologiedeconnexionduclavier + "</td><td>" + p.poids + "</td><td>" + p.Dimensions + "</td><td>" + p.LongueurDuCable + "</td><td>" + p.Prix + "</td>"
+        let trClavier = "<td>" + p.nom + "</td><td>" + p.Normes + "</td><td>" + p.Technologiedeconnexionduclavier + "</td><td>" + p.poids + "</td><td>" + p.Dimensions + "</td><td>" + p.LongueurDuCable + "</td><td>" + p.Prix + "</td>"
         constructionClaviers.innerHTML += trClavier
     }
-
 }
 
 function buildecran() {
 
-
-    var clavier = [
-
-        {nom : "LDLC 29\" LED - Pano XL" ,
-            tailles : "29 pouces "	,
-            resolutions : "2560 x 1080 pixels" ,
-            Frequence : " fréquence d'affichage de 100 Hz",
-            Entreesvidéo : "1 X DisplayPort Femelle\n" +
-                            "2 X HDMI Femelle",
-            couleurs : "noir",
-            Prix : 219.95},
-        {nom : "AOC 24\" LED - 24G2U/BK" ,
-            tailles : "23.8 pouces "	,
-            resolutions : "1920 x 1080 pixels" ,
-            Frequence : " 144 Hz",
-            Entreesvidéo : "1 X DisplayPort Femelle\n" +
-                "2 X HDMI Femelle",
-            couleurs : "noir",
-            Prix : 209.94},
-        {nom : "Acer 21.5\" LED - KA222Qbi" ,
-            tailles : "21.5 pouces "	,
-            resolutions : "1920 x 1080 pixels" ,
-            Frequence : " 76 Hz",
-            Entreesvideo : "1 X HDMI Femelle\n" +
-                "1 X VGA (D-sub 15 Femelle)",
-            couleurs : "noir",
-            Prix : 79.96},
-        ];
-
-    var constructionEcran = document.getElementById("articlesEcrans");
-
+    let constructionEcran = document.getElementById("articlesEcrans");
     for (let p of clavier ) {
-        var trecran = "<td>" + p.nom + "</td><td>" + p.tailles + "</td><td>" + p.resolutions + "</td><td>" + p.Frequence + "</td><td>" + p.Entreesvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
+        let trecran = "<td>" + p.nom + "</td><td>" + p.tailles + "</td><td>" + p.resolutions + "</td><td>" + p.Frequence + "</td><td>" + p.Entreesvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
         constructionEcran.innerHTML += trecran
     }
 
@@ -235,41 +262,24 @@ function buildecran() {
 
 function buildwebcam() {
 
-    var webCam = [
-
-        {nom : "Logitech HD Webcam C270" ,
-            Dimensions : " 71 mm x 31\n" +
-                " mm x 24 mm "	,
-            resolutions : "3 Megapixels" ,
-            Resolutionvideo : " 1280 x 720 pixels",
-            couleurs : "noir",
-            Prix : 39.99},
-        {nom : "AMX AcendoVibe ACV-5100 Gris" ,
-            Dimensions : " 132 x 590 x 105 mm "	,
-            resolutions : "12 Megapixels" ,
-            Resolutionvideo : " 920 x 1080p 30 fps",
-            couleurs : "Grid",
-            Prix : 999.95},
-        {nom : "ASUS ROG Eye" ,
-            Dimensions : " 81 x 28 x 16 mm "	,
-            resolutions : "15 Megapixels" ,
-            Resolutionvideo : " 1920 x 1080 pixels",
-            couleurs : "noir",
-            Prix : 109.94},
-
-    ];
-
-    var constructionwebCam = document.getElementById("articlesWebCam");
-
+    let constructionwebCam = document.getElementById("articlesWebCam");
     for (let p of webCam ) {
-        var trwebcam = "<td>" + p.nom + "</td><td>" + p.Dimensions + "</td><td>" + p.resolutions + "</td><td>" + p.Resolutionvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
+        let trwebcam = "<td>" + p.nom + "</td><td>" + p.Dimensions + "</td><td>" + p.resolutions + "</td><td>" + p.Resolutionvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
         constructionwebCam.innerHTML += trwebcam
     }
 
 
 }
+ **/
+
+function ajoutAchat () {
+
+    document.getElementById("tfootarticles").innerHTML += "<td>" + p.nom + "</td><td>" + p.Prix + "</td>"
 
 
+
+
+}
 
 
 
