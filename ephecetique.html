@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="CSS\cssephecetique.css">
-    <script src="JS\jsephecetique.js"></script>
+    <link rel="stylesheet" href="CSS/cssephecetique.css">
+    <script src="JS/jsephecetique.js"></script>
     <meta charset="UTF-8">
     <title>Ephecetique</title>
 </head>
@@ -12,7 +12,7 @@
 </header>
 
 
-<main>
+    <section id="lesOrdis">
     <div id="pc">
 
         <h1>ORDINATEURS DE BUREAUX ET PORTABLES</h1>
@@ -37,24 +37,13 @@
 
             <tbody id="articlesBureaux">
 
-            <tr>
-
-
-
-
-            </tr>
             </tbody>
-
 
         </table>
 
         <h3>ORDINATEURS PORTABLES</h3>
 
         <table id="pcPortable">
-
-
-
-
 
             <thead>
             <tr>
@@ -71,17 +60,14 @@
 
             <tbody id="articlesPortables">
 
-            <tr>
-
-
-
-
-            </tr>
             </tbody>
         </table>
 
     </div>
-    <div id="périphérique">
+    </section>
+
+    <section id=id="périphérique"></section>
+    <div >
 
         <h1>PÉRIPHÉRIQUE PC</h1>
 
@@ -102,19 +88,9 @@
 
             <tbody id="articlesSouris">
 
-            <tr>
-
-
-
-
-            </tr>
             </tbody>
 
-
-
-
         </table>
-
 
         <h3>Clavier</h3>
         <table id="clavier">
@@ -134,17 +110,7 @@
 
             <tbody id="articlesClaviers">
 
-            <tr>
-
-
-
-
-            </tr>
             </tbody>
-
-
-
-
 
         </table>
 
@@ -167,12 +133,6 @@
 
             <tbody id="articlesEcrans">
 
-            <tr>
-
-
-
-
-            </tr>
             </tbody>
         </table>
 
@@ -189,66 +149,67 @@
                 <th>couleurs</th>
                 <th>Prix</th>
 
-
             </tr>
             </thead>
 
             <tbody id="articlesWebCam">
 
-            <tr>
-
-
-
-
-            </tr>
             </tbody>
-
-
-
-
-
-
-
 
         </table>
 
-
-
-
     </div>
 
-    <div id="panier">
-
-        <table id="panierAchat"></table>
 
 
-        <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Quantité </th>
+<section id="panierachat">
 
-            <th>Prix</th>
+    <h1>Panier Achats</h1>
 
+    <table class="panier">
 
-        </tr>
-        </thead>
+        <caption>Synthèse de vos articles choisis</caption>
+    <thead>
+    <th>Nom</th>
+    <th>Prix</th>
+    <th>quantité</th>
+    <th>Total</th>
 
-        <tbody>
+    </thead>
 
+        <tbody id="tbodyarticles">
 
         </tbody>
 
+    <tfoot id="tfootarticles">
+    <tr>
+        <td></td>
+        <td></td>
+        <td> <form id="quantitédemander">
+
+
+            <label  name="quantitévoulue"></label>
+            <input type="number"  name="quantitévoulue" placeholder="entre 0 et 200">
 
 
 
-    </div>
+
+
+        </form></td>
+        <td id="total"></td>
+
+
+    </tr>
+
+
+    </tfoot>
 
 
 
+    </table>
 
 
-
-</main>
+</section>
 
 
 
