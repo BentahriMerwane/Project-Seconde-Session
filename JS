@@ -89,31 +89,31 @@ const pcPortable = [
 
 const  souris = [
 
-        {id : "S01",
-            nom : "Logitech B100 Optical USB Mouse (Noir)" ,
-            bouton : "3 boutons"	,
-            dpi : "800 dpi" ,
-            poids : "130 g" ,
-            cable : "Câble de 180 cm" ,
-            Prix : 9.95
-        },
-        {id : "S02",
-            nom : "Glorious Model O Regular (Blanc Mat)" ,
-            bouton : " 6boutons"	,
-            dpi : "12 000 dpi" ,
-            poids : "67 g" ,
-            cable : "Câble de 2m" ,
-            Prix : 64.94
-        },
-        {id : "S03",
-            nom : "ASUS Cerberus Fortus" ,
-            bouton : "6 boutons"	,
-            dpi : "4000 dpi" ,
-            poids : "114 g" ,
-            cable : "Câble de 1.8m" ,
-            Prix : 49.94
-        }
-    ];
+    {id : "S01",
+        nom : "Logitech B100 Optical USB Mouse (Noir)" ,
+        bouton : "3 boutons"	,
+        dpi : "800 dpi" ,
+        poids : "130 g" ,
+        cable : "Câble de 180 cm" ,
+        Prix : 9.95
+    },
+    {id : "S02",
+        nom : "Glorious Model O Regular (Blanc Mat)" ,
+        bouton : " 6boutons"	,
+        dpi : "12 000 dpi" ,
+        poids : "67 g" ,
+        cable : "Câble de 2m" ,
+        Prix : 64.94
+    },
+    {id : "S03",
+        nom : "ASUS Cerberus Fortus" ,
+        bouton : "6 boutons"	,
+        dpi : "4000 dpi" ,
+        poids : "114 g" ,
+        cable : "Câble de 1.8m" ,
+        Prix : 49.94
+    }
+];
 
 const clavier = [
 
@@ -176,110 +176,178 @@ function buildHTMLarticles   () {
     let constructionPcBureaux = document.getElementById("articlesBureaux");
 
     for (let p of pcBureaux ) {
-        let trBureaux = "<tr id=" + p.id + "  + ondblclick='ajoutAchat()'  "+ "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.carteMere + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Alimentation + "</td><td>" + p.Prix + "</td></tr>"
+
+        let trBureaux = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.carteMere + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Alimentation + "</td><td>" + p.Prix + "</td></tr>"
         constructionPcBureaux.innerHTML += trBureaux
     }
+
     let constructionPcPortables = document.getElementById("articlesPortables");
     for (let p of pcPortable ) {
+
         let trPortables = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Ecran + "</td><td>" + p.Prix + "</td></tr>"
         constructionPcPortables.innerHTML += trPortables
     }
     let constructionSouris = document.getElementById("articlesSouris");
 
     for (let p of souris ) {
-        let trSouris = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.bouton + "</td><td>" + p.dpi + "</td><td>" + p.poids + "</td><td>" + p.cable + "</td><td>" + p.Prix + "</td>"
+
+        let trSouris = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.bouton + "</td><td>" + p.dpi + "</td><td>" + p.poids + "</td><td>" + p.cable + "</td><td>" + p.Prix + "</td></tr>"
         constructionSouris.innerHTML += trSouris
     }
     let constructionClaviers = document.getElementById("articlesClaviers");
     for (let p of clavier ) {
-        let trClavier = "<td>" + p.nom + "</td><td>" + p.Normes + "</td><td>" + p.Technologiedeconnexionduclavier + "</td><td>" + p.poids + "</td><td>" + p.Dimensions + "</td><td>" + p.LongueurDuCable + "</td><td>" + p.Prix + "</td>"
+
+        let trClavier = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.Normes + "</td><td>" + p.Technologiedeconnexionduclavier + "</td><td>" + p.poids + "</td><td>" + p.Dimensions + "</td><td>" + p.Prix + "</td></tr>"
         constructionClaviers.innerHTML += trClavier
+
     }
-    let constructionEcran = document.getElementById("articlesEcrans");
-    for (let p of clavier ) {
-        let trecran = "<td>" + p.nom + "</td><td>" + p.tailles + "</td><td>" + p.resolutions + "</td><td>" + p.Frequence + "</td><td>" + p.Entreesvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
-        constructionEcran.innerHTML += trecran
-    }
-    let constructionwebCam = document.getElementById("articlesWebCam");
-    for (let p of webCam ) {
-        let trwebcam = "<td>" + p.nom + "</td><td>" + p.Dimensions + "</td><td>" + p.resolutions + "</td><td>" + p.Resolutionvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
-        constructionwebCam.innerHTML += trwebcam
-    }
-
-
-
-}
-
-/**
-
-function buildBureaux() {
-
-    let constructionPcBureaux = document.getElementById("articlesBureaux");
-
-    for (let p of pcBureaux ) {
-        let trBureaux = "<tr id=" + p.id + "  + ondblclick='ajoutAchat()'  "+ "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.carteMere + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Alimentation + "</td><td>" + p.Prix + "</td></tr>"
-        constructionPcBureaux.innerHTML += trBureaux
-    }
-}
-
-function buildPortables() {
-
-    let constructionPcPortables = document.getElementById("articlesPortables");
-    for (let p of pcPortable ) {
-        let trPortables = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.processeur + "</td><td>" + p.ram + "</td><td>" + p.stockage + "</td><td>" + p.carteGraphique + "</td><td>" + p.Ecran + "</td><td>" + p.Prix + "</td></tr>"
-        constructionPcPortables.innerHTML += trPortables
-    }
-}
-
-function buildSouris() {
-
-    let constructionSouris = document.getElementById("articlesSouris");
-
-    for (let p of souris ) {
-        let trSouris = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.bouton + "</td><td>" + p.dpi + "</td><td>" + p.poids + "</td><td>" + p.cable + "</td><td>" + p.Prix + "</td>"
-        constructionSouris.innerHTML += trSouris
-    }
-}
-
-function buildclavier() {
-
-    let constructionClaviers = document.getElementById("articlesClaviers");
-    for (let p of clavier ) {
-        let trClavier = "<td>" + p.nom + "</td><td>" + p.Normes + "</td><td>" + p.Technologiedeconnexionduclavier + "</td><td>" + p.poids + "</td><td>" + p.Dimensions + "</td><td>" + p.LongueurDuCable + "</td><td>" + p.Prix + "</td>"
-        constructionClaviers.innerHTML += trClavier
-    }
-}
-
-function buildecran() {
-
-    let constructionEcran = document.getElementById("articlesEcrans");
-    for (let p of clavier ) {
-        let trecran = "<td>" + p.nom + "</td><td>" + p.tailles + "</td><td>" + p.resolutions + "</td><td>" + p.Frequence + "</td><td>" + p.Entreesvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
-        constructionEcran.innerHTML += trecran
-    }
-
-}
-
-function buildwebcam() {
 
     let constructionwebCam = document.getElementById("articlesWebCam");
     for (let p of webCam ) {
-        let trwebcam = "<td>" + p.nom + "</td><td>" + p.Dimensions + "</td><td>" + p.resolutions + "</td><td>" + p.Resolutionvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td>"
+
+        let trwebcam = "<tr id=" + p.id + "><td>" + p.nom + "</td><td>" + p.Dimensions + "</td><td>" + p.resolutions + "</td><td>" + p.Resolutionvideo + "</td><td>" + p.couleurs + "</td><td>" + p.Prix + "</td></tr>";
         constructionwebCam.innerHTML += trwebcam
+
+
+
     }
 
 
-}
- **/
-
-function ajoutAchat () {
-
-    document.getElementById("tfootarticles").innerHTML += "<td>" + p.nom + "</td><td>" + p.Prix + "</td>"
-
-
+return tabArticles_vers_TabAchats(this);
 
 
 }
+
+function tabArticles_vers_TabAchats() {
+    let tableauAchats = document.getElementById("tbodyarticles");
+    let elements = document.querySelectorAll('table.selected tbody tr');
+    for (let e of elements) {
+
+       e.addEventListener("click", function () {
+
+
+
+            tableauAchats.innerHTML += "<tr><td>" + this.cells[0].innerText + "</td><td>" + this.cells[this.cells.length - 1].innerText + "</td><td>" + '<input type="number" onchange="calculeTotale(this)" name="qté" value="1" required>' + "</td><td></td><td><button ONCLICK='supprimerligne(this)'>SUPPRIMER</button></td></tr>";
+
+            calculeTotale(tableauAchats.rows[tableauAchats.rows.length -1].cells[2].getElementsByTagName("input")[0]);
+
+
+        });
+
+    }
+
+}
+
+function calculeTotale (quantite){
+
+
+
+
+    let totale = Number(quantite.parentElement.parentElement.cells[1].innerText) * Number(quantite.value);
+    totale = totale.toFixed(2)
+
+    quantite.parentElement.parentElement.cells[3].innerText = totale;
+
+    let totaleFinale = 0;
+
+        for (let t of quantite.parentElement.parentElement.parentElement.rows ) {
+
+    totaleFinale += Number(t.cells[3].innerText);
+
+
+
+
+    }
+        document.getElementById("total").innerText = totaleFinale.toFixed(2);
+
+
+}
+
+
+function supprimerligne (index) {
+
+
+    let table = document.getElementById("tbodyarticles");
+
+
+    for (let e of table.rows){
+
+
+
+    e.cells[4].onclick = function()
+        {
+            var c = confirm("VOULEZ VOUS SUPPRIMER CETTE ARTICLE");
+            if(c === true)
+            {
+                index = index.parentElement.rowIndex;
+
+                table.deleteRow(index);
+
+                if (document.getElementById("tbodyarticles").rows.length === 0){
+                document.getElementById("total").innerText = 0;
+
+                }
+
+                else {
+                calculeTotale(document.getElementById("tbodyarticles").rows[document.getElementById("tbodyarticles").rows.length -1].cells[2].getElementsByTagName("input")[0]);
+
+            }
+
+
+            }
+
+
+        };
+
+    }
+}
+
+
+
+
+
+
+function traiteclient (){
+
+    let message = document.getElementById("message");
+    let formEmail = document.getElementById("formulaireClient");
+    let nom = formEmail.nom.value;
+    let num = formEmail.tel.value;
+    let email = formEmail.email.value;
+    let texteafficher = "Bonjour" + nom +",vous nous avez contacter avec le numéro :" + num + "et l'adresse e-mail :" + email + "votre message à bien été envoyer , nous vous recontacterins dès que possible";
+
+    console.log(nom);
+    console.log(num)
+    console.log(email);
+    message.innerHTML += "<p>" + texteafficher + "</p>";
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
