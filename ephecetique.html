@@ -12,14 +12,14 @@
 </header>
 
 
-    <section id="lesOrdis">
+<section id="lesOrdis">
     <div id="pc">
 
         <h1>ORDINATEURS DE BUREAUX ET PORTABLES</h1>
 
         <h3>ORDINATEURS DE BUREAUX</h3>
 
-        <table id="pcBureaux">
+        <table id="pcBureaux" class="selected">
 
             <thead>
             <tr>
@@ -43,7 +43,7 @@
 
         <h3>ORDINATEURS PORTABLES</h3>
 
-        <table id="pcPortable">
+        <table id="pcPortable" class="selected">
 
             <thead>
             <tr>
@@ -64,101 +64,80 @@
         </table>
 
     </div>
-    </section>
+</section>
 
-    <section id=id="périphérique"></section>
-    <div >
+<section id=id="périphérique"></section>
+<div >
 
-        <h1>PÉRIPHÉRIQUE PC</h1>
+    <h1>PÉRIPHÉRIQUE PC</h1>
 
-        <h3>Souris</h3>
-        <table id="souris">
+    <h3>Souris</h3>
+    <table id="souris" class="selected">
 
-            <thead>
-            <tr>
-                <th>Nom</th>
-                <th>boutons </th>
-                <th>dpi </th>
-                <th>poids </th>
-                <th>cable</th>
-                <th>Prix</th>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>boutons </th>
+            <th>dpi </th>
+            <th>poids </th>
+            <th>cable</th>
+            <th>Prix</th>
 
-            </tr>
-            </thead>
+        </tr>
+        </thead>
 
-            <tbody id="articlesSouris">
+        <tbody id="articlesSouris">
 
-            </tbody>
+        </tbody>
 
-        </table>
+    </table>
 
-        <h3>Clavier</h3>
-        <table id="clavier">
+    <h3>Clavier</h3>
+    <table id="clavier" class="selected">
 
-            <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Normes </th>
-                <th>Technologie de connexion du clavier </th>
-                <th>poids</th>
-                <th>Dimensions</th>
-                <th>Longueur Du Câble</th>
-                <th>Prix</th>
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Normes </th>
+            <th>Technologie de connexion du clavier </th>
+            <th>poids</th>
+            <th>Dimensions</th>
+            <th>Prix</th>
 
-            </tr>
-            </thead>
+        </tr>
+        </thead>
 
-            <tbody id="articlesClaviers">
+        <tbody id="articlesClaviers">
 
-            </tbody>
+        </tbody>
 
-        </table>
+    </table>
 
-        <h3>écran</h3>
 
-        <table id="écran">
 
-            <thead>
-            <tr>
-                <th>Nom</th>
-                <th>tailles </th>
-                <th>résolutions </th>
-                <th>Fréquence </th>
-                <th>Entrées vidéo</th>
-                <th>couleurs</th>
-                <th>Prix</th>
+    <h3>Webcam</h3>
 
-            </tr>
-            </thead>
+    <table id="webcam" class="selected">
 
-            <tbody id="articlesEcrans">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Dimensions </th>
+            <th>résolutions </th>
+            <th>Résolution vidéo </th>
+            <th>couleurs</th>
+            <th>Prix</th>
 
-            </tbody>
-        </table>
+        </tr>
+        </thead>
 
-        <h3>Webcam</h3>
+        <tbody id="articlesWebCam">
 
-        <table id="webcam">
+        </tbody>
 
-            <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Dimensions </th>
-                <th>résolutions </th>
-                <th>Résolution vidéo </th>
-                <th>couleurs</th>
-                <th>Prix</th>
+    </table>
 
-            </tr>
-            </thead>
-
-            <tbody id="articlesWebCam">
-
-            </tbody>
-
-        </table>
-
-    </div>
+</div>
 
 
 
@@ -169,54 +148,35 @@
     <table class="panier">
 
         <caption>Synthèse de vos articles choisis</caption>
-    <thead>
-    <th>Nom</th>
-    <th>Prix</th>
-    <th>quantité</th>
-    <th>Total</th>
+        <thead>
 
-    </thead>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>quantité</th>
+        <th>Total</th>
+
+        </thead>
 
         <tbody id="tbodyarticles">
 
+
         </tbody>
 
-    <tfoot id="tfootarticles">
-    <tr>
-        <td></td>
-        <td></td>
-        <td> <form id="quantitédemander">
+        <tfoot id="tfootarticles">
+        <tr>
+            <td id="total"></td>
+        </tr>
 
-
-            <label  name="quantitévoulue"></label>
-            <input type="number"  name="quantitévoulue" placeholder="entre 0 et 200">
-
-
-
-
-
-        </form></td>
-        <td id="total"></td>
-
-
-    </tr>
-
-
-    </tfoot>
-
-
+        </tfoot>
 
     </table>
 
-
 </section>
 
+<section>
 
-
-    
-    
-    
-
+    <p>Bonjour. Vous souhaitez nous contacter: <a href="contact.html">Contact</a>
+</section>
 
 </body>
 </html>
