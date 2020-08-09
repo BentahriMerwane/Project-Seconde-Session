@@ -8,8 +8,14 @@
 </head>
 <body class="duFormulaire">
 
+<h1 class="formeh1">Formulaire de contact</h1>
 
-<form id="formulaireClient" onsubmit="traiteclient(this)">
+<section class="blocmessage">
+
+</section>
+
+
+<form id="formulaireClient" action="#" onsubmit="traiteclient();"  >
     <h3>Si Vous voulez nous contacter , pour un problème ou autre c'est ici.</h3>
     <fieldset>
         <legend>Contact</legend>
@@ -18,7 +24,7 @@
         <input id="nom" name="nom" placeholder="Ben-Tahri Merwane" autofocus="" required=""><br>
         <label for="telephone">Portable:</label>
 
-        <input id="telephone"  name="tel" placeholder="04xxxxxxxx" required><br>
+        <input id="telephone"  name="tel" placeholder="04xx-xxx-xxx"   pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required><br>
         <label for="email">Email :</label>
         <input id="email" name="email" type="email" placeholder="Merwane.benTahri@ephecetique.com" required="" ><br>
     </fieldset>
@@ -26,24 +32,14 @@
         <label for="comments">Vos questions ?</label><br>
         <textarea id="comments"></textarea>
     </fieldset>
-    <p><input type="submit" value="Soummettre"></p>
+    <p><input type="submit" value="Envoyer Demande"></p>
 </form>
 
-<section id="message">
 
 
-</section>
-
-
-<footer>
-
-    <section>
-
-        <p>Bonjour. Vous souhaitez retourner au Articles: <a href="ephecetique.html">Articles</a>
+    <section id="lien">
+        <p> Vous souhaitez retourner au Articles: <a href="ephecetique.html">Articles</a>
     </section>
-
-
-</footer>
 
 </body>
 </html>
