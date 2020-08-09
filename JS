@@ -22,7 +22,7 @@ const pcBureaux = [
         stockage : " SSD LDLC F8 PLUS M.2 2280 NVMe 240 Go" ,
         carteGraphique : "NVIDIA GeForce RTX 2060 SUPER 8 Go" ,
         Alimentation : "Alimentation modulaire 650W LDLC US-650G Quality Select 80PLUS Gold" ,
-        Prix : 1699},
+        Prix : 1699.94},
 
     {id : "pcB03",
         nom : "LDLC PC In extensor-SSD" ,
@@ -238,7 +238,7 @@ const webCam = [
         resolutions : "5 MPixels (interpolée)" ,
         Resolutionvideo : " 1280 x 720 pixels",
         couleurs : "noir",
-        Prix : 75.00},
+        Prix : 59.99},
     {id : "wb05",
         nom : "TONES Webcam Full HD" ,
         Dimensions : " 100 x 78 x 28 mm "	,
@@ -296,40 +296,63 @@ return tabArticles_vers_TabAchats(this);
 
 }
 
+/**
+ * Envoye mes articles de leurs table vers le tableau Panier
+ *
+ *
+ *
+ */
+
 function tabArticles_vers_TabAchats() {
-    let tableauAchats = document.getElementById("tbodyarticles");
-    let elements = document.querySelectorAll('table.selected tbody tr');
+    let tableauAchats = document.getElementById("tbodyarticles");// je vais chercher l'élément d'ID tbodyarticles.
+    let elements = document.querySelectorAll('table.selected tbody tr');// je vais chercher les Tr dans les tbody de tableau (articles) qui ont la classe selected.
     for (let e of elements) {
-
+    // je parcour tous mes tr de tableau à classe selected
        e.addEventListener("click", function () {
-
+        // je vais ajouter à chaqun de mes tr dans les table.selected événement clique
             tableauAchats.innerHTML += "<tr><td>" + this.cells[0].innerText + "</td><td>" + this.cells[this.cells.length - 1].innerText + "</td><td>" + '<input type="number" onchange="calculeTotale(this)" name="qté" value="1" required>' + "</td><td></td><td><button ONCLICK='supprimerligne(this)' class='supprimer'>" + '<img src="IMG/supprimer.jpg" alt="Bouton-supprimer">' + "</button></td></tr>";
-
-            calculeTotale(tableauAchats.rows[tableauAchats.rows.length -1].cells[2].getElementsByTagName("input")[0]);
-
+           /** avec les événement clique , je rajouter une fonction anonyme qui ajouter donc après un cliquer la cellule 0 (nom) et la dernière (prix) vers le tableau achat
+            *ensuite je rajoute un input de number qui permettras de choisir une quantitée d'articles qui est référence a la fonction calculeTotale(this) grâce au this.
+            *Et un bouton supprimer qui me permet de supprimer une ligne article que je ne veux plus qui lorsque je clique appel supprimerligne(this),
+            *
+            */
+            calculeTotale(tableauAchats.rows[tableauAchats.rows.length -1].cells[2].getElementsByTagName("input")[0]); // input de serre de quantitée pour un calcule
 
         });
-
     }
-
 }
+
+
+/**
+ *Cette fonction me permets de calculer ma quantité * le prix
+ *
+ *
+ * @param quantite quantitée - est l'input de number qui seras multiplier avec les prix
+ */
 
 function calculeTotale (quantite){
 
     let totale = Number(quantite.parentElement.parentElement.cells[1].innerText) * Number(quantite.value);
-    totale = totale.toFixed(2)
+    /**
+     *   une variable total qui permet de faire la multiplication en le prix de la cellule 1 qui contient le prix * la quantité des inputs.
+     *   pour rechercher mon prix dans la cellule input est dans un td son premier parent puis le tr le parent de td ensuite nous prenons le number du prix dans la cellule 1.
+      */
+
+
+
+    totale = totale.toFixed(2);// permet de mettre 2 chiffres après la virgule
 
     quantite.parentElement.parentElement.cells[3].innerText = totale;
-
+    // nous affectons le total à la 3 ème cellules du tableau panier achats
     let totaleFinale = 0;
 
         for (let t of quantite.parentElement.parentElement.parentElement.rows ) {
-
+// nous parcourons toute les lignes du tableau
     totaleFinale += Number(t.cells[3].innerText);
-
+    // nous récupérons tout les totaux de calcule entre la quantitée et le prix
     }
         document.getElementById("total").innerText = totaleFinale.toFixed(2);
-
+        // et nous ajoutons ces totaux dans une cellule id total , les uns après les autres
 }
 
 
@@ -347,7 +370,7 @@ function supprimerligne (index) {
 
                 table.deleteRow(index);
                 if (document.getElementById("tbodyarticles").rows.length === 0){
-                document.getElementById("total").innerText = 0 ;
+                document.getElementById("total").innerText = 0;
 
                 }
 
